@@ -20,7 +20,7 @@ namespace OverloadedOps
         public static Point operator +(Point p1, Point p2) => new Point(p1.X + p2.X, p1.Y + p2.Y);
         public static Point operator -(Point p1, Point p2) => new Point(p1.X - p2.X, p1.Y - p2.Y);
 
-        public static Point operator +(Point p1, int change) => new Point(p1.X + change, p1.y + change);
-        public static Point operator +(int change, Point p1) => new Point(p1.X + change, p1.y + change);
+        public static Point operator +(Point p1, int change) => new Point(p1.X + change, p1.Y + change);
+        public static Point operator +(int change, Point p1) => new Point(p1.X + change, p1.Y + change);
     }
 }
