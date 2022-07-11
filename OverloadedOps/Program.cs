@@ -18,6 +18,9 @@ namespace OverloadedOps
             Console.WriteLine("point one - point two: {0}", pointOne-pointTwo);
             // вычесть одну точку из другой pointTwo - pointOne
             Console.WriteLine("point two - point one: {0}",pointTwo-pointOne);
+            Point pointThree = pointOne + 25;
+            Console.WriteLine("point one + 25 = {0}", pointThree);
+            Console.WriteLine("17 + point three = {0}", 17+ pointThree);
         }
     }
 }
