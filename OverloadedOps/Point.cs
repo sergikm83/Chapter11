@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OverloadedOps
 {
-    public class Point
+    public class Point : IComparable<Point>
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -28,5 +28,18 @@ namespace OverloadedOps
         public override int GetHashCode() => this.ToString().GetHashCode();
         public static bool operator ==(Point p1, Point p2) => p1.Equals(p2);
         public static bool operator !=(Point p1, Point p2) => !p1.Equals(p2);
+        public int CompareTo(Point other)
+        {
+            if (this.X > other.X && this.Y > other.Y)
+                return 1;
+            if (this.X < other.X && this.Y < other.Y)
+                return -1;
+            else
+                return 0;
+        }
+        public static bool operator <(Point p1, Point p2) => p1.CompareTo(p2) < 0;
+        public static bool operator >(Point p1, Point p2) => p1.CompareTo(p2) > 0;
+        public static bool operator <=(Point p1, Point p2) => p1.CompareTo(p2) <= 0;
+        public static bool operator >=(Point p1, Point p2) => p1.CompareTo(p2) > =0;
     }
 }
