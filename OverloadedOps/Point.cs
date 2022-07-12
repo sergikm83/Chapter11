@@ -40,6 +40,6 @@ namespace OverloadedOps
         public static bool operator <(Point p1, Point p2) => p1.CompareTo(p2) < 0;
         public static bool operator >(Point p1, Point p2) => p1.CompareTo(p2) > 0;
         public static bool operator <=(Point p1, Point p2) => p1.CompareTo(p2) <= 0;
-        public static bool operator >=(Point p1, Point p2) => p1.CompareTo(p2) > =0;
+        public static bool operator >=(Point p1, Point p2) => p1.CompareTo(p2) >=0;
     }
 }
