@@ -17,5 +17,10 @@ namespace CustomConversions
             Console.WriteLine(s.ToString());
             s.Draw();
         }
+        static void DrawSquare(Square sq)
+        {
+            Console.WriteLine(sq.ToString());
+            sq.Draw();
+        }
     }
 }
