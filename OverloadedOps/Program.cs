@@ -21,6 +21,9 @@ namespace OverloadedOps
             Point pointThree = pointOne + 25;
             Console.WriteLine("point one + 25 = {0}", pointThree);
             Console.WriteLine("17 + point three = {0}", 17+ pointThree);
+            Point pointFour = new Point(0, 500);
+            pointFour += pointThree;
+            Console.WriteLine("point four + point three = {0}",pointFour);
         }
     }
 }
