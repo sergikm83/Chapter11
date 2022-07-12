@@ -25,5 +25,14 @@ namespace CustomConversions
             }
         }
         public override string ToString() => $"[Width = {Width}; Height = {Height}]";
+        public static implicit operator Rectangle (Square s)
+        {
+            Rectangle r = new Rectangle
+            {
+                Width = s.Length,
+                Height = s.Length * 2
+            };
+            return r;
+        }
     }
 }
