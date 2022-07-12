@@ -20,6 +20,11 @@ namespace CustomConversions
             Rectangle rect = new Rectangle(10, 5);
             DrawSquare((Square)rect);
 
+            Square sq2 = (Square)90;
+            Console.WriteLine("sq2 = {0}", sq2);
+
+            int side = (int)sq2;
+            Console.WriteLine("Side length of sq2 = {0}", side);
         }
         static void DrawSquare(Square sq)
         {
