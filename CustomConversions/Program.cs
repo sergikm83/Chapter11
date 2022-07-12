@@ -16,6 +16,10 @@ namespace CustomConversions
             Square s = (Square)r;
             Console.WriteLine(s.ToString());
             s.Draw();
+
+            Rectangle rect = new Rectangle(10, 5);
+            DrawSquare((Square)rect);
+
         }
         static void DrawSquare(Square sq)
         {
