@@ -29,5 +29,11 @@ namespace CustomConversions
             Square s = new Square { Length = r.Height };
             return s;
         }
+        public static explicit operator Square(int sideLength)
+        {
+            Square newSquare = new Square { Length = sideLength };
+            return newSquare;
+        }
+        public static explicit operator int (Square s) => s.Length;
     }
 }
