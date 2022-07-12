@@ -24,5 +24,9 @@ namespace OverloadedOps
         public static Point operator +(int change, Point p1) => new Point(p1.X + change, p1.Y + change);
         public static Point operator ++(Point p1) => new Point(p1.X++, p1.Y++);
         public static Point operator --(Point p1) => new Point(p1.X--, p1.Y--);
+        public override bool Equals(object o) => o.ToString() == this.ToString();
+        public override int GetHashCode() => this.ToString().GetHashCode();
+        public static bool operator ==(Point p1, Point p2) => p1.Equals(p2);
+        public static bool operator !=(Point p1, Point p2) => !p1.Equals(p2);
     }
 }
