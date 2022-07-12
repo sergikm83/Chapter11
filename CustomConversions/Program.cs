@@ -25,6 +25,10 @@ namespace CustomConversions
 
             int side = (int)sq2;
             Console.WriteLine("Side length of sq2 = {0}", side);
+            Square s3 = new Square(83);
+            Rectangle rect2 = s3;
+            Square s4 = new Square(3);
+            Rectangle rect3 = (Rectangle)s4;
         }
         static void DrawSquare(Square sq)
         {
